@@ -1,0 +1,21 @@
+# TrialShopy Company Portfolio Tasks
+
+- `[x]` Day 1: Backend Setup, Schemas, Seeding, Swagger & API Routes
+  - `[x]` Initialize backend directory and install dependencies (`express`, `mongoose`, `dotenv`, `cors`, `jsonwebtoken`, `bcryptjs`, `multer`, `nodemailer`, `swagger-ui-express`, `swagger-jsdoc`)
+  - `[x]` Setup server.js boilerplate and config/db.js MongoDB Atlas connection
+  - `[x]` Define all 8 Mongoose models (User, Product, Career, Application, Contact, Testimonial, TeamMember, Stats)
+  - `[x]` Implement database seeding logic for default admin, 10 products, 5 team members, 4 careers, and 3 testimonials
+  - `[x]` Implement JWT auth utility and authentication route (`/api/auth/login`)
+  - `[x]` Implement JWT route protection middleware and Multer file upload setup
+  - `[x]` Implement API routes for Products, Careers, Contacts, Testimonials, Team, and Stats/Visitors
+  - `[x]` Integrate Nodemailer with Ethereal email preview in the contact route
+  - `[x]` Configure Swagger UI API documentation on `/api-docs`
+  - `[x]` Verify local backend APIs (auth, seeding, and endpoints)
+- `[x]` Day 2: Frontend Setup, Routing, Themes & Public Pages (Tailwind v4)
+  - `[x]` Initialize React frontend with Vite, Tailwind v4, and Router
+  - `[x]` Design global responsive Header, Footer, and Theme Toggle
+  - `[x]` Implement SEO component and dynamic metadata updates
+  - `[x]` Build Home, About, Features, and How-it-Works screens
+  - `[x]` Build Products catalog with Category Filters and Details Modal
+  - `[x]` Build Team, Careers, and Contact Us pages with maps and API integration
+- `[ ]` Day 3: Admin Panel, Dashboard Charts, Actual Deployment & Integration
