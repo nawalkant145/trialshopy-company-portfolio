@@ -47,10 +47,10 @@ The diagram below outlines the communication flow between the frontend applicati
 
 ```mermaid
 graph TD
-    classDef client fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef server fill:#bbf,stroke:#333,stroke-width:2px;
-    classDef db fill:#bfb,stroke:#333,stroke-width:2px;
-    classDef external fill:#fbb,stroke:#333,stroke-width:2px;
+    classDef client fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    classDef server fill:#bbf,stroke:#333,stroke-width:2px,color:#000;
+    classDef db fill:#bfb,stroke:#333,stroke-width:2px,color:#000;
+    classDef external fill:#fbb,stroke:#333,stroke-width:2px,color:#000;
 
     %% Components
     Client["Client (Vercel)<br/>React + Tailwind CSS v4 + Chart.js"]:::client
