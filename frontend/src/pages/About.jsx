@@ -52,7 +52,7 @@ export default function About() {
       />
 
       {/* ─── Hero ─── */}
-      <section className={`relative overflow-hidden pt-32 pb-24 ${isDark ? 'bg-[#0a0a0f]' : 'bg-slate-50'}`}>
+      <section className={`relative overflow-hidden pt-44 pb-24 ${isDark ? 'bg-[#0a0a0f]' : 'bg-slate-50'}`}>
         <div className="orb orb-orange w-96 h-96 -top-32 -left-32 opacity-30" />
         <div className="orb orb-purple w-80 h-80 top-10 right-0 opacity-20" />
         <div className="container relative z-10 text-center">

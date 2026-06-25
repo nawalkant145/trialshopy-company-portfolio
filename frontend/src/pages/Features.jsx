@@ -93,7 +93,7 @@ export default function Features() {
       />
 
       {/* ─── Hero ─── */}
-      <section className={`relative overflow-hidden pt-32 pb-24 text-center ${isDark ? 'bg-[#0a0a0f]' : 'bg-slate-50'}`}>
+      <section className={`relative overflow-hidden pt-44 pb-24 text-center ${isDark ? 'bg-[#0a0a0f]' : 'bg-slate-50'}`}>
         <div className="orb orb-orange w-96 h-96 -top-40 left-0 opacity-25" />
         <div className="orb orb-purple w-80 h-80 top-0 right-0 opacity-20" />
         <div className="container relative z-10">

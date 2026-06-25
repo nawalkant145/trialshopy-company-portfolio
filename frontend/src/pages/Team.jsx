@@ -201,7 +201,7 @@ export default function Team() {
         <div className="orb orb-purple w-[400px] h-[400px] -bottom-32 -left-32 opacity-20" />
         <div className="absolute inset-0 opacity-[0.03]"
           style={{ backgroundImage: 'linear-gradient(rgba(249,115,22,1) 1px, transparent 1px), linear-gradient(90deg, rgba(249,115,22,1) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
-        <div className="container relative z-10 pt-32 pb-20 text-center">
+        <div className="container relative z-10 pt-44 pb-20 text-center">
           <div className="animate-fade-in-up">
             <div className="badge mb-6 mx-auto w-fit">
               <span>👥</span>
