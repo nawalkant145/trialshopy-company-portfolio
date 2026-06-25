@@ -224,10 +224,12 @@ export default function Home() {
                 { icon: '⚡', title: '2 Second Try-On', desc: 'Fastest virtual fitting room experience' },
                 { icon: '🌍', title: '50+ Locations', desc: 'Deployed across colleges and offices' },
               ].map(({ icon, title, desc }) => (
-                <div key={title} className={`card p-6 flex flex-col h-full border ${isDark ? 'bg-[#16213e] border-white/5' : 'bg-white border-slate-100'}`}>
-                  <div className="text-3xl mb-4">{icon}</div>
-                  <h3 className={`font-display font-bold text-base mb-2 ${isDark ? 'text-white' : 'text-slate-900'}`}>{title}</h3>
-                  <p className={`text-xs md:text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{desc}</p>
+                <div key={title} className={`card p-6 flex flex-col gap-3 h-full border ${isDark ? 'bg-[#16213e] border-white/5' : 'bg-white border-slate-100'}`}>
+                  <div className="text-3xl">{icon}</div>
+                  <div className="flex flex-col flex-1">
+                    <h3 className={`font-display font-bold text-base mb-1.5 ${isDark ? 'text-white' : 'text-slate-900'}`}>{title}</h3>
+                    <p className={`text-xs md:text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
