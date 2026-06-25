@@ -28,7 +28,7 @@ export default function Login() {
       const res = await API.post('/auth/login', { email, password });
       
       if (res.data?.token) {
-        login(res.data.token, res.data.user);
+        login(res.data.user || { email }, res.data.token);
         navigate('/admin/dashboard');
       } else {
         setError('Login failed: Token not found in response.');
