@@ -41,7 +41,7 @@ export default function Careers() {
       try {
         setLoading(true);
         const res = await API.get('/careers');
-        setCareers(res.data || []);
+        setCareers(res.data?.data || res.data || []);
       } catch (err) {
         console.error('Error fetching careers:', err);
         setError('Failed to fetch career openings. Please try again later.');

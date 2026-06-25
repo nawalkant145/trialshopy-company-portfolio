@@ -36,8 +36,9 @@ export default function Products() {
       try {
         setLoading(true);
         const res = await API.get('/products');
-        setProducts(res.data || []);
-        setFilteredProducts(res.data || []);
+        const items = res.data?.data || res.data || [];
+        setProducts(items);
+        setFilteredProducts(items);
       } catch (err) {
         console.error('Error fetching products:', err);
         setError('Failed to load products. Please try again later.');
