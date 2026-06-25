@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* ============================================================
    TRIALSHOPY GLOBAL DESIGN SYSTEM
@@ -47,6 +50,8 @@ html {
 body {
   font-family: var(--font-sans);
   transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #f8fafc;
+  color: #1e293b;
 }
 
 /* Dark mode */
@@ -55,14 +60,7 @@ body {
   color: #e2e8f0;
 }
 
-/* Light mode */
-body {
-  background-color: #f8fafc;
-  color: #1e293b;
-}
-
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
 /* ============================================================
    GLOBAL COMPONENT STYLES
@@ -79,14 +77,11 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .dark .glass-card {
   background: rgba(255, 255, 255, 0.05);
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.7);
 }
 
 /* Button Styles */
@@ -162,10 +157,13 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(249, 115, 22, 0.15);
 }
 
 .dark .card {
@@ -173,17 +171,8 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.card {
-  background: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
 .dark .card:hover {
   box-shadow: 0 12px 40px rgba(249, 115, 22, 0.2);
-}
-
-.card:hover {
-  box-shadow: 0 12px 40px rgba(249, 115, 22, 0.15);
 }
 
 /* Section Title */
@@ -230,18 +219,15 @@ body {
   transition: all 0.2s ease;
   outline: none;
   font-family: var(--font-sans);
+  background: white;
+  border-color: #e2e8f0;
+  color: #1e293b;
 }
 
 .dark .form-input {
   background: #1a1a2e;
   border-color: rgba(255,255,255,0.1);
   color: #e2e8f0;
-}
-
-.form-input {
-  background: white;
-  border-color: #e2e8f0;
-  color: #1e293b;
 }
 
 .form-input:focus {
@@ -309,14 +295,14 @@ body {
 }
 
 /* Dark mode card backgrounds */
-.dark .bg-card { background: #16213e; }
 .bg-card { background: white; }
+.dark .bg-card { background: #16213e; }
 
-.dark .bg-surface { background: #0f0f1a; }
 .bg-surface { background: #f8fafc; }
+.dark .bg-surface { background: #0f0f1a; }
 
-.dark .text-muted { color: #94a3b8; }
 .text-muted { color: #64748b; }
+.dark .text-muted { color: #94a3b8; }
 
-.dark .border-subtle { border-color: rgba(255,255,255,0.08); }
 .border-subtle { border-color: #e2e8f0; }
+.dark .border-subtle { border-color: rgba(255,255,255,0.08); }
