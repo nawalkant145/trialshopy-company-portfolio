@@ -273,14 +273,14 @@ export default function Home() {
           <h2 className="font-display font-black text-4xl md:text-5xl text-white mb-4">
             Ready to Transform Your Shopping?
           </h2>
-          <p className="text-orange-100 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-orange-100 text-lg mb-8 max-w-xl mx-auto text-center">
             Find a TrialShopy Smart AR Display near you or bring one to your space. Experience the future of fashion today.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/products" className="btn-primary bg-white text-orange-600 hover:bg-orange-50 hover:shadow-white/30">
               Browse Products
             </Link>
-            <Link to="/contact" className="btn-secondary border-white text-white hover:bg-white hover:text-orange-600">
+            <Link to="/contact" className="btn-secondary !border-white !text-white hover:!bg-white hover:!text-orange-600">
               Contact Us
             </Link>
           </div>
