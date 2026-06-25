@@ -84,17 +84,17 @@ export default function Products() {
       <section className={`py-12 ${isDark ? 'bg-[#0f0f1a]' : 'bg-white'}`}>
         <div className="container">
           {/* Categories bar */}
-          <div className="flex flex-wrap gap-2 justify-center mb-10">
+          <div className="flex flex-wrap gap-3 justify-center mb-10">
             {categories.map(cat => (
               <button
                 key={cat}
                 onClick={() => handleFilter(cat)}
-                className={`px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-200 cursor-pointer ${
+                className={`px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-200 cursor-pointer whitespace-nowrap flex-shrink-0 ${
                   selectedCategory === cat
-                    ? 'bg-gradient-to-r from-orange-500 to-purple-600 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-orange-500 to-purple-600 text-white shadow-lg scale-105'
                     : isDark
-                      ? 'bg-[#16213e] text-slate-300 hover:bg-white/10'
-                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                      ? 'bg-[#16213e] border border-white/5 text-slate-300 hover:bg-white/10'
+                      : 'bg-slate-100 border border-slate-200 text-slate-700 hover:bg-slate-200'
                 }`}
               >
                 {cat}
