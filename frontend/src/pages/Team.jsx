@@ -30,7 +30,7 @@ function FounderCard({ member, isDark }) {
           <div className="relative flex-shrink-0">
             <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-orange-500 to-purple-600 blur-sm opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
             <img
-              src={member.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=f97316&color=fff&size=160`}
+              src={member.imageUrl || member.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=f97316&color=fff&size=160`}
               alt={member.name}
               className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white/20"
               onError={e => { e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=f97316&color=fff&size=160`; }}
@@ -86,7 +86,7 @@ function CoreTeamCard({ member, isDark }) {
       <div className="relative mb-4">
         <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-orange-500/40 to-purple-600/40 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         <img
-          src={member.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=8b5cf6&color=fff&size=120`}
+          src={member.imageUrl || member.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=8b5cf6&color=fff&size=120`}
           alt={member.name}
           className="relative w-24 h-24 rounded-full object-cover border-4 border-transparent group-hover:border-orange-500/50 transition-all duration-300"
           onError={e => { e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=8b5cf6&color=fff&size=120`; }}
@@ -126,7 +126,7 @@ function AdvisorCard({ member, isDark }) {
     <div className={`card group flex items-center gap-5 p-5 ${isDark ? 'bg-[#16213e]' : 'bg-white'}`}>
       <div className="relative flex-shrink-0">
         <img
-          src={member.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=1a1a2e&color=f97316&size=80`}
+          src={member.imageUrl || member.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=1a1a2e&color=f97316&size=80`}
           alt={member.name}
           className="w-16 h-16 rounded-2xl object-cover group-hover:scale-105 transition-transform duration-300"
           onError={e => { e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=1a1a2e&color=f97316&size=80`; }}
