@@ -53,7 +53,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-4">
             {navLinks.map(({ to, label }) => (
               <NavLink
                 key={to}

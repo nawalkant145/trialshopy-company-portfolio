@@ -148,8 +148,13 @@ export default function Home() {
                       </div>
                     </div>
                     {/* AR corner markers */}
-                    {['top-3 left-3', 'top-3 right-3', 'bottom-3 left-3', 'bottom-3 right-3'].map((pos, i) => (
-                      <div key={i} className={`absolute ${pos} w-6 h-6 border-2 border-orange-400 ${i < 2 ? 'rounded-tl-lg' : 'rounded-br-lg'}`} style={{ borderRadius: i === 0 ? '6px 0 0 0' : i === 1 ? '0 6px 0 0' : i === 2 ? '0 0 0 6px' : '0 0 6px 0' }} />
+                    {[
+                      { pos: 'top-3 left-3', border: 'border-t-2 border-l-2 rounded-tl-md' },
+                      { pos: 'top-3 right-3', border: 'border-t-2 border-r-2 rounded-tr-md' },
+                      { pos: 'bottom-3 left-3', border: 'border-b-2 border-l-2 rounded-bl-md' },
+                      { pos: 'bottom-3 right-3', border: 'border-b-2 border-r-2 rounded-br-md' }
+                    ].map(({ pos, border }, i) => (
+                      <div key={i} className={`absolute ${pos} ${border} w-6 h-6 border-orange-400`} />
                     ))}
                   </div>
 
@@ -160,13 +165,13 @@ export default function Home() {
                 </div>
 
                 {/* Floating badge top */}
-                <div className={`absolute -top-4 -right-4 glass-card rounded-2xl px-3 py-2 shadow-xl ${isDark ? 'bg-[#16213e]' : 'bg-white'} border border-orange-500/30`}>
+                <div className={`absolute -top-4 -right-4 glass-card rounded-2xl px-4 py-2.5 shadow-xl ${isDark ? 'bg-[#16213e]' : 'bg-white'} border border-orange-500/30 z-10 whitespace-nowrap`}>
                   <p className="text-orange-500 font-bold text-sm">98% Fit</p>
                   <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Accuracy</p>
                 </div>
 
                 {/* Floating badge bottom */}
-                <div className={`absolute -bottom-4 -left-4 glass-card rounded-2xl px-3 py-2 shadow-xl ${isDark ? 'bg-[#16213e]' : 'bg-white'} border border-purple-500/30`}>
+                <div className={`absolute -bottom-4 -left-4 glass-card rounded-2xl px-4 py-2.5 shadow-xl ${isDark ? 'bg-[#16213e]' : 'bg-white'} border border-purple-500/30 z-10 whitespace-nowrap`}>
                   <p className="text-purple-500 font-bold text-sm">2s</p>
                   <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Try-on Time</p>
                 </div>
@@ -219,10 +224,10 @@ export default function Home() {
                 { icon: '⚡', title: '2 Second Try-On', desc: 'Fastest virtual fitting room experience' },
                 { icon: '🌍', title: '50+ Locations', desc: 'Deployed across colleges and offices' },
               ].map(({ icon, title, desc }) => (
-                <div key={title} className={`card p-5 ${isDark ? 'bg-[#16213e]' : 'bg-white'}`}>
-                  <div className="text-3xl mb-3">{icon}</div>
-                  <h3 className={`font-bold text-sm mb-1 ${isDark ? 'text-white' : 'text-slate-900'}`}>{title}</h3>
-                  <p className={`text-xs leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{desc}</p>
+                <div key={title} className={`card p-6 flex flex-col h-full border ${isDark ? 'bg-[#16213e] border-white/5' : 'bg-white border-slate-100'}`}>
+                  <div className="text-3xl mb-4">{icon}</div>
+                  <h3 className={`font-display font-bold text-base mb-2 ${isDark ? 'text-white' : 'text-slate-900'}`}>{title}</h3>
+                  <p className={`text-xs md:text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{desc}</p>
                 </div>
               ))}
             </div>
